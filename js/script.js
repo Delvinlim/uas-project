@@ -17,3 +17,13 @@ anime.timeline({loop: false})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+  let navbar = document.querySelector('.navbar');
+
+  document.querySelector('#menu-btn').onclick = () => {
+    navbar.classList.toggle('active')
+  }
+  
+  window.onscroll = () => {
+    navbar.classList.remove('active')
+  }

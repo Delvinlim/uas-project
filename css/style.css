@@ -6,7 +6,6 @@
     --border:.2rem solid #fff;
     --scrollbar-bg: linear-gradient(180deg, rgba(255,255,255,0) 0%);
     /* --scrollbar-bg: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(31,62,240,1) 100%); */
-    
 }
 
 *{
@@ -22,7 +21,7 @@
 html{
     font-size: 60%;
     overflow-x: hidden;
-    scroll-padding-top: 9rem;
+    scroll-padding-top: 3rem; /** scroll behaviour */
     scroll-behavior: smooth;
 }
 
@@ -47,6 +46,10 @@ body{
 
 section{
     padding: 1.3rem 7%; /* * 1%  used to set the padding in left and right  */
+}
+
+#menu-btn{
+    display: none;
 }
 
 .heading{
@@ -96,8 +99,15 @@ section{
 
 .header .navbar a:hover{
     color: #fcaf17;
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
+    border-bottom: .1rem solid white;
+    padding-bottom: .3rem;
+}
+
+.header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
 }
 
 .home{
@@ -279,7 +289,10 @@ section{
 }
 
 @media (max-width:768px){
-
+    body{
+        background-size: auto;
+        background-position:left;
+    }
     .home{
         background-position: left;
         justify-content: center;
@@ -297,6 +310,34 @@ section{
 }
 
 @media (max-width:450px){
+    #menu-btn{
+        display: inline-block;
+    }    
+    
+    /* TODO Style this */
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        /* background: linear-gradient(90deg, rgba(255,255,255,0) 100%, rgba(31,62,240,1) 100%); */
+        background: yellowgreen;
+        /* width: 100%; */
+        width: 12rem;
+        /* height: 100%; */
+        height: calc(100vh - 9.5rem);
+    }
+    
+    .header .navbar.active{
+        right: 0;
+    }
+    
+    .header .navbar a{
+        color:var(--black);
+        display: block;
+        margin: 2rem;
+        padding: 1rem;
+        font-size: 2rem;
+    }    
+    
 
     html{
         font-size: 50%;
