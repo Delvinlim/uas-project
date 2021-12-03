@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAS Project</title>
+
+    <!-- Font Awesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="images/profile2.jpeg" alt="Logo" />
+      </a>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#games">game</a>
+        <a href="#teams">teams</a>
+        <a href="#review">review</a>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>kiddos game....why not ?</h3>
+        <p data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1500">
+          sadness is temporary. happiness is eternal.<br />find your happiness
+          in kiddos which contains various games that can make your life happier
+        </p>
+        <a
+          href="#games"
+          class="btn btn-primary"
+          data-aos="fade-right"
+          data-aos-delay="2200"
+          data-aos-duration="1500"
+          >play now</a
+        >
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section class="games" id="games">
+      <h1 class="heading">our <span>games</span></h1>
+
+      <div class="box-container">
+        <div
+          class="box"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          <div class="image">
+            <img
+              src="images/snake.png"
+              class="img-thumbnail"
+              alt="Snake Game Picture"
+            />
+          </div>
+          <div class="content">
+            <h3>Snake Game</h3>
+            <a href="snake.html" type="button" class="btn btn-primary"
+              >Play Now</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="box"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          <div class="image">
+            <img
+              src="images/aim lab.jpg"
+              class="img-thumbnail"
+              alt="Aim Lab Picture"
+            />
+          </div>
+          <div class="content">
+            <h3>aim lab</h3>
+            <a href="" type="button" class="btn btn-primary">Play Now</a>
+          </div>
+        </div>
+
+        <div
+          class="box"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          <div class="image">
+            <img
+              src="images/rock paper scissor.jpg"
+              class="img-thumbnail"
+              alt="Rock Paper Scissors Picture"
+            />
+          </div>
+          <div class="content">
+            <h3>suit game</h3>
+            <a href="" type="button" class="btn btn-primary">Play Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teams -->
+    <section class="teams" id="teams">
+      <h1 class="heading">our <span>teams</span></h1>
+
+      <div class="container-fluid">
+        <div
+          class="row text-center"
+          data-aos="zoom-in-up"
+          data-aos-duration="1200"
+          data-aos-once="true"
+        >
+          <div class="col-md-4">
+            <img
+              src="images/profile1.jpeg"
+              class="img-thumbnail rounded-circle"
+              style="width: 40%"
+              alt="Teams Picture"
+            />
+            <h1>Augustino Sanduo</h1>
+            <a
+              href="#"
+              class="btn btn-outline-primary mb-5"
+              data-bs-toggle="modal"
+              data-bs-target="#alaiModal"
+              >details</a
+            >
+          </div>
+          <div class="col-md-4">
+            <img
+              src="images/profile2.jpeg"
+              class="img-thumbnail rounded-circle"
+              style="width: 40%"
+              alt=""
+            />
+            <h1>Delvin Lim</h1>
+            <a
+              href="#"
+              class="btn btn-outline-primary mb-5"
+              data-bs-toggle="modal"
+              data-bs-target="#delvinModal"
+              >details</a
+            >
+          </div>
+          <div class="col-md-4">
+            <img
+              src="images/profile3.jpeg"
+              class="img-thumbnail rounded-circle"
+              style="width: 40%"
+              alt=""
+            />
+            <h1>Vincentius Junior Samudra</h1>
+            <a
+              href="#"
+              class="btn btn-outline-primary mb-5"
+              data-bs-toggle="modal"
+              data-bs-target="#vincentiusModal"
+              >details</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="row text-center"
+          data-aos="zoom-in-up"
+          data-aos-duration="1200"
+          data-aos-once="true"
+        >
+          <div class="col-md-4">
+            <img
+              src="images/profile1.jpeg"
+              class="img-thumbnail rounded-circle"
+              style="width: 40%"
+              alt=""
+            />
+            <h1>Jason Andrian</h1>
+            <a
+              href="#"
+              class="btn btn-outline-primary mb-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >details</a
+            >
+          </div>
+          <div class="col-md-4">
+            <img
+              src="images/profile2.jpeg"
+              class="img-thumbnail rounded-circle"
+              style="width: 40%"
+              alt=""
+            />
+            <h1>Navelina</h1>
+            <a
+              href="#"
+              class="btn btn-outline-primary mb-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >details</a
+            >
+          </div>
+          <div class="col-md-4">
+            <img
+              src="images/profile3.jpeg"
+              class="img-thumbnail rounded-circle"
+              style="width: 40%"
+              alt=""
+            />
+            <h1>Jeffrey Andrian</h1>
+            <a
+              href="#"
+              class="btn btn-outline-primary mb-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >details</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="alaiModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="col-12 modal-title text-center" id="exampleModalLabel">
+              Details
+            </h1>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="container col-md-12">
+              <div class="row">
+                <div class="col-md-5 text-center">
+                  <img src="images/muka alai.png" alt="" />
+                </div>
+                <div class="col-md-7 text-center">
+                  <h1>Augustino Sanduo</h1>
+                  <h1>2131040</h1>
+                  <h1>Sistem Informasi</h1>
+                  <div class="border"></div>
+                  <h1 class="mt-2">Social Media</h1>
+                  <div class="social">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="delvinModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="col-12 modal-title text-center" id="exampleModalLabel">
+              Details
+            </h1>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="container col-md-12">
+              <div class="row">
+                <div class="col-md-5 text-center">
+                  <img src="images/profile2.jpeg" alt="" />
+                </div>
+                <div class="col-md-7 text-center">
+                  <h1>Delvin Lim</h1>
+                  <h1>2131035</h1>
+                  <h1>Sistem Informasi</h1>
+                  <div class="border"></div>
+                  <h1 class="mt-2 display-4">Social Media</h1>
+                  <div class="social">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review -->
+    <section class="review" id="review">
+      <h1 class="heading">student's <span>review</span></h1>
+
+      <div class="box-container">
+        <div
+          class="box"
+          style="overflow-x: hidden"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          <img src="images/quote-img.png" alt="" class="quote" />
+          <p>
+            Interesting, even tho this is a game for kids. i kinda like it so
+            much. simple game but still good enough
+          </p>
+          <img src="images/muka alai.png" class="user" alt="" />
+          <h3>anonymous</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+
+        <div
+          class="box"
+          data-aos="fade-down"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          <img src="images/quote-img.png" alt="" class="quote" />
+          <p>
+            Interesting, even tho this is a game for kids. i kinda like it so
+            much. simple game but still good enough
+          </p>
+          <img src="images/muka alai.png" class="user" alt="" />
+          <h3>anonymous</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+
+        <div
+          class="box"
+          style="overflow-x: hidden"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          <img src="images/quote-img.png" alt="" class="quote" />
+          <p>
+            Interesting, even tho this is a game for kids. i kinda like it so
+            much. simple game but still good enough
+          </p>
+          <img src="images/muka alai.png" class="user" alt="" />
+          <h3>anonymous</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="credit">created by <span>group 6</span></div>
+    </section>
+
+    <!-- Anime JS -->
+    <script src="anime-master/lib/anime.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JS  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
