@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock Paper and Scissors</title>
+    <link class="icon" rel="shortcut icon" type="image" href="img/paper.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <section class="game">
+      <!-- SCORE -->
+      <div class="score">
+        <div class="player-score">
+          <h2>Your Score:</h2>
+          <p>0</p>
+        </div>
+        <div class="computer-score">
+          <h2>Computer Score:</h2>
+          <p>0</p>
+        </div>
+      </div>
+
+      <!-- Main Menu -->
+      <div class="intro">
+        <h1>HAND SUIT</h1>
+        <h2>Rock, Paper, and Scissors</h2>
+        <br><br><br>
+        <!-- <img src="./img/rock.png" alt="" /> -->
+        <button class="start" id="" onclick="audio.play();">START</button>
+        <br>
+        <button class="settingsBtn" onclick="audio.play();">SETTINGS</button>
+      </div>
+
+      <!-- Match -->
+      <div class="match fadeOut">
+        <h2 class="winner">Choose an option!</h2>
+        <div class="hands">
+          <img class="player-hand" src="./img/rock.png" alt="" />
+          <img class="versus" src="./img/versus.png" alt=""/>
+          <img class="computer-hand" src="./img/rock.png" alt="" />
+        </div>
+        <div class="options">
+          <button class="rock"  onclick="audio.play();"><img src="./img/rock.png" width="52" height="52">Rock</button>
+          <button class="paper" onclick="audio.play();"><img src="./img/paper.png" width="52" height="50">Paper</button>
+          <button class="scissors" onclick="audio.play();"><img src="./img/scissors.png" width="50" height="52">Scissors</button>
+        
+        </div>
+        <div class="quit">
+          <button data-quit-button onclick="audio.play();">Quit</button>
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div class="settings fadeOut">
+        <div class="settings-header">
+          <h2 class="judul">Settings</h2>
+          <button data-close-button class="close-button" onclick="audio.play();">&times;</button>
+        </div>  
+        <div>
+          <br>
+          <h2> Audio Settings</h2>
+          <button class="musicplaybtn" id="musicbtn" onclick="musik.play();"></button>
+            <h3>>Play/Pause Music</h3>
+            &nbsp;
+            &nbsp;
+        </div>
+      </div>
+
+      <!-- Audio -->
+      <div>
+        <audio id="audio">
+          <source id="" src="audio/click1.mp3" type="audio/mpeg">
+          <source id="musik" src="audio/bgm.mp3" type="audio/mpeg">
+        </audio>
+      </div>   
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
