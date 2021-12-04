@@ -14,6 +14,7 @@ const game = () => {
       introScreen.classList.remove("fadeIn");
     });
   };
+  
   //settings
   const goSettings = () => {
     const settingsBtn = document.querySelector(".settingsBtn");
@@ -26,6 +27,7 @@ const game = () => {
       introScreen.classList.remove("fadeIn");
     });
   };
+  
   // close match
   const closeGameButton = document.querySelectorAll("[data-quit-button]");
   const match = document.querySelector(".match");
@@ -42,6 +44,7 @@ const game = () => {
     introScreen.classList.add("fadeIn");
     match.classList.remove("fadeIn");
   }
+  
   //close button settings
   const closeSettingsButtons = document.querySelectorAll("[data-close-button]");
   const introScreen = document.querySelector(".intro");
@@ -59,6 +62,7 @@ const game = () => {
     introScreen.classList.add("fadeIn");
     settings.classList.remove("fadeIn");
   }
+  
   //Play Match
   const playMatch = () => {
     const options = document.querySelectorAll(".options button");
@@ -94,6 +98,7 @@ const game = () => {
       });
     });
   };
+  
   //Sound effect
   let win = new Audio();
   let loss = new Audio();
@@ -144,6 +149,7 @@ const game = () => {
       tie.play();
       return;
     }
+    
     //Check for Rock
     if (playerChoice === "Rock") {
       if (computerChoice === "Scissors") {
@@ -160,6 +166,7 @@ const game = () => {
         return;
       }
     }
+    
     //Check for Paper
     if (playerChoice === "Paper") {
       if (computerChoice === "Scissors") {
@@ -176,6 +183,7 @@ const game = () => {
         return;
       }
     }
+    
     //Check for Scissors
     if (playerChoice === "Scissors") {
       if (computerChoice === "Rock") {
