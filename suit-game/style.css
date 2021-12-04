@@ -12,12 +12,14 @@ section {
   background-attachment: fixed;
   font-family: sans-serif;
 }
+
 .intro img {
   position: absolute;
   left: 120px;
   bottom: 120px;
   transform: rotateY(180deg);
 }
+
 .score {
   color: rgb(255, 255, 255);
   box-shadow: 5px 5px 5px rgb(54, 51, 51);
@@ -33,6 +35,7 @@ section {
 .score h2 {
   font-size: 30px;
 }
+
 .score p {
   text-align: center;
   padding: 10px;
@@ -98,6 +101,7 @@ section {
   box-shadow: 0px 5px 0px rgb(180, 71, 20), 0px 5px 0px #222222;
   transform: translateY(4px);
 }
+
 .quit button {
   font-size: 18px;
   position: absolute;
@@ -108,6 +112,7 @@ section {
   right: 1px;
   bottom: 15px;
 }
+
 .quit button:active {
   box-shadow: 0px 5px 0px rgb(180, 71, 20), 0px 5px 0px #222222;
   transform: translateY(4px);
@@ -141,6 +146,11 @@ section {
   height: 350px;
   transition: opacity 0.5s ease 0.5s;
 }
+
+.settings h3 {
+  color: rgb(128, 12, 12);
+}
+
 .settings-header {
   padding: 10px 15px;
   border-bottom: 5px solid rgb(228, 0, 0);
@@ -149,10 +159,12 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+
 .settings-header .judul {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
 }
+
 .settings-header .close-button {
   cursor: pointer;
   border: none;
@@ -166,13 +178,26 @@ section {
   font-weight: bold;
 }
 
+.settings-body {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.settings-body h3 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
 .close-button:hover {
   background-color: rgb(167, 3, 3);
 }
+
 .settings h2 {
   color: rgb(128, 12, 12);
   text-align: center;
 }
+
 .musicplaybtn {
   border: none;
   border-radius: 1px;
@@ -186,12 +211,51 @@ section {
   outline: none;
   margin-left: 10px;
 }
-.settings h3 {
-  color: rgb(128, 12, 12);
-}
+
 #musicbtn {
   background-image: url("./img/pause.png");
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
 }
+
+#musicSlider {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#musicVolume {
+  background: linear-gradient(to right, rgb(128, 12, 12) 0%,rgb(128, 12, 12) 50%, #fff 50%, #fff 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  height: 10px;
+  width: 50%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  background: #434343;
+  border-radius: 8px;
+  cursor: ew-resize;
+  width: 10px;
+  height: 10px;
+  -webkit-appearance: none;
+}
+
+/* 
+#rangeNumber {
+  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  height: 100%;
+  width: 8%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+} */
 
 .winner {
   background: linear-gradient(to bottom, #ff4800, #fbff00);

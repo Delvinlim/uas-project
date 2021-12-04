@@ -88,10 +88,12 @@ const game = () => {
         setTimeout(() => {
           //Here is where we call compare hands
           compareHands(this.textContent, computerChoice);
+          
           //Update Images
           playerHand.src = `./img/${this.textContent}.png`;
           computerHand.src = `./img/${computerChoice}.png`;
         }, 2000);
+        
         //Animation
         playerHand.style.animation = "shakePlayer 2s ease";
         computerHand.style.animation = "shakeComputer 2s ease";
@@ -103,6 +105,7 @@ const game = () => {
   let win = new Audio();
   let loss = new Audio();
   let tie = new Audio();
+  let userClick = new Audio()
 
   win.src = "audio/win.mp3";
   loss.src = "audio/loss.mp3";
@@ -114,6 +117,19 @@ const game = () => {
   musik.loop = true;
   musik.play();
 
+  // Volume Slider
+  window.setVolume = function (val) {
+    musik.volume = val / 100
+  }
+
+  // Volume Slider Custom
+  musicVolume = document.getElementById("musicVolume")
+    
+  musicVolume.addEventListener("input", function() {
+    var value = (this.value-this.min)/(this.max-this.min)*100
+    this.style.background = 'linear-gradient(to right, rgb(128, 12, 12) 0%, rgb(128, 12, 12) ' + value + '%, #fff ' + value + '%, #fff 100%)'
+  })
+  
   function playAudio() {
     var play = document.getElementById("musicbtn");
     var mute = document.getElementById("stopbtn");
@@ -143,6 +159,7 @@ const game = () => {
   const compareHands = (playerChoice, computerChoice) => {
     //Update Text
     const winner = document.querySelector(".winner");
+    
     //Checking for a tie
     if (playerChoice === computerChoice) {
       winner.textContent = "Oops, It's a tie";
@@ -202,7 +219,7 @@ const game = () => {
     }
   };
 
-  //Is call all the inner function
+  //call all the inner function
   startGame();
   goSettings();
   playMatch();
