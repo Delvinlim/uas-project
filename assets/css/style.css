@@ -21,7 +21,7 @@
 html{
     font-size: 60%;
     overflow-x: hidden;
-    scroll-padding-top: 3rem; /** scroll behaviour */
+    scroll-padding-top: 1.5rem; /** scroll behaviour */
     scroll-behavior: smooth;
 }
 
@@ -69,13 +69,19 @@ section{
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: .9rem 3rem;
+    padding: 1rem 3rem;
     font-size: 1.7rem;
-    color:#fff;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(31,62,240,1) 100%);
+    color: black;
+    border-radius: 10%;
+    /* color:#fff; */
+    background: white;
+    /* background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(31,62,240,1) 100%); */
     cursor: pointer;
 }
 
+/*--------------------------------------------------------------
+# HEADER
+--------------------------------------------------------------*/  
 .header{
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(31,62,240,1) 100%);
     display: flex;
@@ -110,6 +116,9 @@ section{
     margin-left: 2rem;
 }
 
+/*--------------------------------------------------------------
+# HOME
+--------------------------------------------------------------*/  
 .home{
     min-height: 102vh;
     display: flex;
@@ -140,6 +149,9 @@ section{
     color:#fff;
 }
 
+/*--------------------------------------------------------------
+# GAMES
+--------------------------------------------------------------*/
 .games .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -151,20 +163,6 @@ section{
     border: var(--border);
     padding: 2rem;
 }
-
-/* .games .box-container .box .icons a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    border:var(--border);
-    color:#fff;
-    margin:.3rem;
-}
-
-.games .box-container .box .icons a:hover{
-    background:var(--main-color);
-} */
 
 .games .box-container .box .image{
     padding: 2.5rem 0;
@@ -188,12 +186,6 @@ section{
     color: var(--main-color);
 }
 
-.teams .container-fluid h1{
-    color: #fff;
-    font-size: 2.5rem;
-    margin-top: 1rem;
-}
-
 /* use this later if i want change the img that is in div tag not img tag */
 /* .teams img .alai {
     margin: auto;
@@ -203,43 +195,86 @@ section{
     transition: all .5s ease-in 0.2s;
 } */
 
-.review .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
-}
-
-.review .box-container .box{
-    border:var(--border);
-    text-align: center;
-    padding:3rem 2rem;
-}
-
-.review .box-container .box p{
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color:#ccc;
-    padding:2rem 0;
-}
-
-.review .box-container .box .user{
-    height: 7rem;
-    width: 7rem;
+/*--------------------------------------------------------------
+# REVIEWS
+--------------------------------------------------------------*/
+.reviews .review-item {
+    box-sizing: content-box;
+    min-height: 320px;
+  }
+  
+  .reviews .review-item .review-img {
+    width: 90px;
     border-radius: 50%;
-    object-fit: cover;
-}
-
-.review .box-container .box h3{
-    padding:1rem 0;
-    font-size: 2rem;
-    color:#fff;
-}
-
-.review .box-container .box .stars i{
+    margin: -40px 0 0 40px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid black;
+  }
+  
+  .reviews .review-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 45px;
+    color: #111;
+  }
+  
+  .reviews .review-item h4 {
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 0 45px;
+  }
+  
+  .reviews .review-item .quote-icon-left, .reviews .review-item .quote-icon-right {
+    color: #d8dee1;
+    font-size: 26px;
+  }
+  
+  .reviews .review-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+  }
+  
+  .reviews .review-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+  }
+  
+  .reviews .review-item p {
+    font-style: italic;
     font-size: 1.5rem;
-    color: #fff;
-}
-
+    margin: 0 15px 0 15px;
+    padding: 20px 20px 60px 20px;
+    background: #f4f6f7;
+    position: relative;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .reviews .swiper-pagination {
+    margin-top: 1rem;
+    position: relative;
+  }
+  
+  .reviews .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #009cea;
+  }
+  
+  .reviews .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #009cea;
+  }
+  
+/*--------------------------------------------------------------
+# MODALS FOR TEAMS
+--------------------------------------------------------------*/  
 .modal-content .modal-body .social{
     padding: 1rem 0 ;
 }
@@ -258,6 +293,10 @@ section{
 .modal-content .modal-body .social a:hover{
     background-color: var(--main-color);
 }
+
+/*--------------------------------------------------------------
+# FOOTER
+--------------------------------------------------------------*/  
 
 .footer{
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(31,62,240,1) 100%);
