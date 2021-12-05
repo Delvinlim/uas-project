@@ -73,6 +73,7 @@ const game = () => {
     hands.forEach((hand) => {
       hand.addEventListener("animationend", function () {
         this.style.animation = "";
+        console.log('hand function right here');
       });
     });
 
@@ -87,10 +88,12 @@ const game = () => {
 
         setTimeout(() => {
           //Here is where we call compare hands
-          compareHands(this.textContent, computerChoice);
-          
+          compareHands(this.innerText, computerChoice);
+
           //Update Images
-          playerHand.src = `./img/${this.textContent}.png`;
+          // console.log(this.textContent, 'player ');
+          console.log(this.innerText, 'player ');
+          playerHand.src = `./img/${this.innerText}.png`;
           computerHand.src = `./img/${computerChoice}.png`;
         }, 2000);
         
@@ -105,7 +108,6 @@ const game = () => {
   let win = new Audio();
   let loss = new Audio();
   let tie = new Audio();
-  let userClick = new Audio()
 
   win.src = "audio/win.mp3";
   loss.src = "audio/loss.mp3";
