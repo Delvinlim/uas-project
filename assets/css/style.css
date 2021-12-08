@@ -200,7 +200,7 @@ section{
 --------------------------------------------------------------*/
 .reviews .review-item {
     box-sizing: content-box;
-    min-height: 320px;
+    min-height: 300px;
   }
   
   .reviews .review-item .review-img {
@@ -215,13 +215,14 @@ section{
   .reviews .review-item h3 {
     font-size: 18px;
     font-weight: bold;
-    margin: 10px 0 5px 45px;
+    margin: 10px 0 3px 45px;
     color: #111;
   }
   
   .reviews .review-item h4 {
     font-size: 14px;
-    color: #999;
+    color: #fff;
+    font-weight: lighter;
     margin: 0 0 0 45px;
   }
   
@@ -256,7 +257,7 @@ section{
   }
   
   .reviews .swiper-pagination {
-    margin-top: 1rem;
+    /* margin-top: 2rem; */
     position: relative;
   }
   
@@ -310,7 +311,9 @@ section{
     padding:1.5rem;
 }
 
-/* media queries  */
+/*--------------------------------------------------------------
+# MEDIA QUERIES
+--------------------------------------------------------------*/  
 @media (max-width:991px){
 
     html{
