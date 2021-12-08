@@ -44,9 +44,9 @@
         <br />
         <button class="settingsBtn" onclick="audio.play();">SETTINGS</button>
         <br />
-        <button onclick="window.location = '../index.html#games'">EXIT</button>
+        <button onclick="exitGame()">EXIT</button>
       </div>
-
+      <!-- window.location = '../index.html#games' -->
       <!-- Match -->
       <div class="match fadeOut">
         <h2 class="winner">Choose an option!</h2>
@@ -57,11 +57,14 @@
         </div>
         <div class="options">
           <button class="rock" onclick="audio.play();">
-            <img src="./img/rock.png" width="52" height="52" />Rock</button>
+            <img src="./img/rock.png" width="52" height="52" />Rock
+          </button>
           <button class="paper" onclick="audio.play();">
-            <img src="./img/paper.png" width="52" height="50" />Paper</button>
+            <img src="./img/paper.png" width="52" height="50" />Paper
+          </button>
           <button class="scissors" onclick="audio.play();">
-            <img src="./img/scissors.png" width="50" height="52" />Scissors</button>
+            <img src="./img/scissors.png" width="50" height="52" />Scissors
+          </button>
         </div>
         <div class="quit">
           <button data-quit-button onclick="audio.play();">Quit</button>
@@ -116,6 +119,9 @@
       </div>
     </section>
 
+    <!-- Sweetalert 2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <!-- Custom JS -->
     <script src="script.js"></script>
   </body>

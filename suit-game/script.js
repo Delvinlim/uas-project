@@ -44,7 +44,7 @@ const game = () => {
     introScreen.classList.add("fadeIn");
     match.classList.remove("fadeIn");
   }
-  
+
   //close button settings
   const closeSettingsButtons = document.querySelectorAll("[data-close-button]");
   const introScreen = document.querySelector(".intro");
@@ -150,12 +150,48 @@ const game = () => {
   }
   window.addEventListener("load", playAudio);
 
+  // testing
+  const updateWinner = () => {
+    if(pScore >= 5){
+      Swal.fire({
+        title: 'You Win',
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          left top
+          no-repeat
+        `
+      })
+    }
+    if(cScore >= 5){
+      Swal.fire({
+        title: 'You Lose',
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          left top
+          no-repeat
+        `
+      })
+      console.log('hello');
+    }
+  }
+  
   //update score
   const updateScore = () => {
     const playerScore = document.querySelector(".player-score p");
     const computerScore = document.querySelector(".computer-score p");
+    // Check score
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
+
+    updateWinner();
   };
 
   const compareHands = (playerChoice, computerChoice) => {
@@ -226,6 +262,35 @@ const game = () => {
   goSettings();
   playMatch();
 };
+
+function exitGame() {
+  let timerInterval
+  Swal.fire({
+    title: 'Thank You for playing the game!',
+    width: 500,
+    padding: '2em',
+    background: '#fff',
+    // html: '<b></b>',
+    timer: 1000,
+    timerProgressBar: true,
+    didOpen: () => {
+      Swal.showLoading()
+      const b = Swal.getHtmlContainer().querySelector('b')
+      timerInterval = setInterval(() => {
+        b.textContent = Swal.getTimerLeft()
+      }, 100)
+    },
+    willClose: () => {
+      clearInterval(timerInterval)
+    }
+  }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+      // console.log('aaaa')
+      window.location = "../index.html#games"
+    }
+  })
+}
 
 //start the game function
 game();
