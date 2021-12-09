@@ -151,7 +151,7 @@ const game = () => {
   window.addEventListener("load", playAudio);
 
   // testing
-  const updateWinner = () => {
+  const updateWinner = (playerScore, computerScore) => {
     if(pScore >= 5){
       Swal.fire({
         title: 'You Win',
@@ -159,11 +159,11 @@ const game = () => {
         padding: '3em',
         color: '#716add',
         background: '#fff',
-        backdrop: `
-          rgba(0,0,123,0.4)
-          left top
-          no-repeat
-        `
+        backdrop: `rgba(0,0,123,0.4)`
+      }).then(() => {
+        playerScore == "0"
+        computerScore == "0"
+        window.location = "index.html"
       })
     }
     if(cScore >= 5){
@@ -173,12 +173,12 @@ const game = () => {
         padding: '3em',
         color: '#716add',
         background: '#fff',
-        backdrop: `
-          rgba(0,0,123,0.4)
-          left top
-          no-repeat
-        `
-      })
+        backdrop: `rgba(0,0,123,0.4)`
+      }).then(() => {
+        playerScore == "0"
+        computerScore == "0"
+        window.location = "index.html"
+      });
       console.log('hello');
     }
   }
@@ -191,7 +191,7 @@ const game = () => {
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
 
-    updateWinner();
+    updateWinner(playerScore, computerScore);
   };
 
   const compareHands = (playerChoice, computerChoice) => {
