@@ -4,7 +4,7 @@ var fs = require('fs')
 const { Http2ServerRequest } = require('http2')
 var path = require('path')
 var http = require('http').Server(app)
-var port = 3000
+// var port = 3000
 
 // Get static files (js css images)
 app.use(express.static(path.join(__dirname, '/assets')));
@@ -24,7 +24,7 @@ var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port = process.env.OPENSHIFT_NODEJS_PORT || 4000;
 
 http.listen(port, ipaddress, function() {
-  console.log(`Running on Openshift Server`);
+  console.log(`Express server listening on port ${port}`);
 })
 
 // app.listen(port, () => {
