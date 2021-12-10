@@ -7,7 +7,7 @@
     <title>Rock Paper and Scissors</title>
 
     <!-- Page Icon -->
-    <link class="icon" rel="shortcut icon" type="image" href="img/paper.png" />
+    <link class="icon" rel="shortcut icon" type="image" href="./img/paper.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,9 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap"
       rel="stylesheet"
     />
-
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="css/suit.css" />
+
   </head>
   <body>
     <section class="game">
@@ -51,19 +52,19 @@
       <div class="match fadeOut">
         <h2 class="winner">Choose an option!</h2>
         <div class="hands">
-          <img class="player-hand" src="./img/rock.png" alt="Player Hand Image" />
-          <img class="versus" src="./img/versus.png" alt="Versus Image" />
-          <img class="computer-hand" src="./img/rock.png" alt="Computer Hand Image" />
+          <img class="player-hand" src="img/rock.png" alt="Player Hand Image" />
+          <img class="versus" src="img/versus.png" alt="Versus Image" />
+          <img class="computer-hand" src="img/rock.png" alt="Computer Hand Image" />
         </div>
         <div class="options">
           <button class="rock" onclick="audio.play();">
-            <img src="./img/rock.png" width="52" height="52" />Rock
+            <img src="img/rock.png" width="52" height="52" />Rock
           </button>
           <button class="paper" onclick="audio.play();">
-            <img src="./img/paper.png" width="52" height="50" />Paper
+            <img src="img/paper.png" width="52" height="50" />Paper
           </button>
           <button class="scissors" onclick="audio.play();">
-            <img src="./img/scissors.png" width="50" height="52" />Scissors
+            <img src="img/scissors.png" width="50" height="52" />Scissors
           </button>
         </div>
         <div class="quit">
@@ -123,6 +124,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="js/suit.js"></script>
   </body>
 </html>
