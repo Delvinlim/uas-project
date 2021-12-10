@@ -92,9 +92,9 @@ const game = () => {
 
           //Update Images
           // console.log(this.textContent, 'player ');
-          console.log(this.innerText, 'inner text');
-          console.log(this.textContent, 'text content');
-          playerHand.src = `/img/${this.lower(innerText)}.png`;
+          // console.log(this.innerText, 'inner text');
+          // console.log(this.textContent, 'text content');
+          playerHand.src = `/img/${this.innerText}.png`;
           computerHand.src = `/img/${computerChoice}.png`;
         }, 2000);
         
