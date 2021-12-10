@@ -78,7 +78,7 @@ const game = () => {
     });
 
     //Computer Options
-    const computerOptions = ["Rock", "Paper", "Scissors"];
+    const computerOptions = ["rock", "paper", "scissors"];
 
     options.forEach((option) => {
       option.addEventListener("click", function () {
@@ -93,8 +93,8 @@ const game = () => {
           //Update Images
           // console.log(this.textContent, 'player ');
           console.log(this.innerText, 'player ');
-          playerHand.src = `./img/${this.innerText}.png`;
-          computerHand.src = `./img/${computerChoice}.png`;
+          playerHand.src = `/img/${this.innerText}.png`;
+          computerHand.src = `/img/${computerChoice}.png`;
         }, 2000);
         
         //Animation
