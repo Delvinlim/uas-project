@@ -19,11 +19,11 @@ app.get('/suit', (req, res) =>{
   res.sendFile(__dirname + '/suit-game/index.html')
 })
 
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+// var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
-var port = process.env.OPENSHIFT_NODEJS_PORT || 4000;
+var port = process.env.PORT || 8080;
 
-http.listen(port, ipaddress, function() {
+http.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
 })
 
