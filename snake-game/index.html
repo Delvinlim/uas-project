@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>halo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
 
-  <link rel="stylesheet" href="../assets/css/welcoming.css">
-  <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
-  
+    <!-- Page Icon -->
+    <link class="icon" rel="shortcut icon" type="image" href="/img/icon snake.png"> 
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/snake.css">
 </head>
-<body class="welcome">
-  <span id="splash-overlay" class="splash"></span>
-  <span id="welcome" class="z-depth-4"></span>
-    <h1 class="text-center align-center display-3 m-auto">COMING SOON</h1>
-  
-  
+<body>  
+    <div class="animation-area">
+          <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class="guide">
+            <li>
+              <button class="toGuide" onclick="document.location='/snake/game/guide'">Guide</button>
+              <button class="back" onclick="document.location='/snake'">Back</button>
+            </li>
+          </ul>
+            <div id="gameTitle"> Snake Game</div>
+            <div id="scoreBox">Score: 0</div>
+            <div id="hiscoreBox">HighScore: 0</div>
+            <div id="board"></div>
+    </div> 
+    
+    <!-- Custom CSS -->
+    <script src="/js/snake.js"></script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+h1 {
+  font-size: 4.5rem;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.buttonAnimation {
+  padding: 15px 100px;
+  margin:10px 4px;
+  color: #fff;
+  width: 100%;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  
+}
+
+/* Bot */
+.buttonAnimation::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom:0px;
+  z-index:-1;
+  width: 0%;
+  height:1px;
+  background: #f5d714;
+  box-shadow: inset 0px 0px 0px #6098FF;
+  display: block;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+/* Bot */
+.buttonAnimation:hover::before {
+  width:100%;
+}
+
+/* Top */
+.buttonAnimation::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top:0px;
+  z-index:-1;
+  width: 0%;
+  height:1px;
+  background: #000c94;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+/* Top */
+.buttonAnimation:hover::after {
+  width:100%;
+}
+
+/* Left Right */
+.buttonAnimation:hover{
+  border-left:1px solid #000c94;
+  border-right:1px solid #f5d714;
+}

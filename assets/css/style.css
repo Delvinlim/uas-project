@@ -332,11 +332,12 @@ section{
 
 @media (max-width:768px){
     body{
-        background-size: auto;
-        background-position:left;
+        /* background-size: 100%; */
+        background-position: left bottom;
     }
+    
     .home{
-        background-position: left;
+        /* background-position: center bottom; */
         justify-content: center;
         text-align: center;
     }

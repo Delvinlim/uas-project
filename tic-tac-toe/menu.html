@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Tic Tac Toe</title>
+
+    <!-- Page Icon -->
+    <link class="icon" rel="shortcut icon" type="image" href="/img/tic-tac-kecil.jpg"/>
+    
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/animate.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/tictactoe.css" />
+  </head>
+  <body>
+		<!-- Title -->
+    <div id="title">
+      <span class="text">Tic Tac Toe</span>
+      <span class="gradient"></span>
+      <span class="dodge"></span>
+    </div>
+
+		<!-- Container -->
+    <div class="container-fluid">
+      <div class="row">
+        <form class="startBtnContainer" action="/tic-tac-toe/menu/game">
+          <div class="col-sm-12 mt-3">
+              <button name="random" type="submit" class="startChoiceBtn btn btn-lg btn-info">
+                <i class="startChoice fa fa-random" aria-hidden="true"></i>
+              </button>
+
+              <div class="gameDesc mt-1">Find Random Player</div>
+          </div>
+        </form>
+        <form class="startBtnContainer" action="/tic-tac-toe/menu/game">
+          <div class="col-sm-12 mt-5">
+            <button name="createPrivate" type="submit" class="startChoiceBtn btn btn-lg btn-info">
+              <i class="fa fa-user-secret" aria-hidden="true"></i>
+            </button>
+            
+            <div class="gameDesc mt-1">Create Private Lobby</div>
+          </div>
+        </form>
+        
+        <form class="startBtnContainer" action="/tic-tac-toe/menu/join">
+          <div class="col-sm-12 mt-5">
+            <button name="joinPrivate" type="submit" class="startChoiceBtn btn btn-lg btn-info">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+            </button>
+            
+            <div class="gameDesc mt-1">Join Private Lobby</div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <a href="/tic-tac-toe" class="quitGameBtn btn mt-3">
+      <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+    </a>
+
+		<!-- Jquery CDN -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script> -->
+
+    <!-- Sweetalert 2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/game.js"></script>
+  </body>
+</html>

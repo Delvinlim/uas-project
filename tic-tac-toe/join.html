@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+		name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+			/>
+		<title>Tic Tac Toe</title>
+		
+    <!-- Page Icon -->
+    <link class="icon" rel="shortcut icon" type="image" href="/img/tic-tac-kecil.jpg"/>
+    
+		<!-- Font Awesome CDN -->
+    <link
+		rel="stylesheet"
+		type="text/css"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+
+		<!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css" />
+
+
+		<!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/tictactoe.css" />
+  </head>
+  <body>
+		<!-- Titlle -->
+    <div id="title">
+      <span class="text">Tic Tac Toe</span>
+      <span class="gradient"></span>
+      <span class="dodge"></span>
+    </div>
+		
+		<!-- Container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <form action="/tic-tac-toe/menu/game">
+            <label id="enterCodeLabel" class="fs-1 mb-3">Enter Room Code</label
+            ><input
+              type="tel"
+              id="gameCodeInput"
+              class="form-control form-control-lg text-center"
+              name="gameCode"
+              />
+              <button class="btn-join btn btn-lg mt-3" type="submit">
+                <i class="fa fa-sign-in me-3" aria-hidden="true">&nbsp;&nbsp;Join Game</i>
+              </button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <form action="/tic-tac-toe/menu">
+      <div class="menuBtnContainer">
+        <button class="menuBtn loadingMenuBtnJoin btn" type="submit">
+          <i class="fa fa-sign-out" aria-hidden="true">&nbsp;Back To Menu</i>
+          <!-- Menu -->
+        </button>
+      </div>
+    </form>
+  </body>
+</html>

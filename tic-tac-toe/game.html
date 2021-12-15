@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />		
+    <meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Tic Tac Toe</title>
+		
+    <!-- Page Icon -->
+    <link class="icon" rel="shortcut icon" type="image" href="/img/tic-tac-kecil.jpg"/>
+    
+		<!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+		
+		<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
+
+		<!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/animate.css" />
+
+		<!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/tictactoe.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5 pt-3">
+        <div class="col-lg-6">
+          <div id="gameContainer">
+            <table class="table table-bordered border-danger" id="TicTacToeBoard">
+              <tr>
+                <td onclick="boxClick(this)" class="box" id="1"></td>
+                <td onclick="boxClick(this)" class="box" id="2"></td>
+                <td onclick="boxClick(this)" class="box" id="3"></td>
+              </tr>
+              <tr>
+                <td onclick="boxClick(this)" class="box" id="4"></td>
+                <td onclick="boxClick(this)" class="box" id="5"></td>
+                <td onclick="boxClick(this)" class="box" id="6"></td>
+              </tr>
+              <tr>
+                <td onclick="boxClick(this)" class="box" id="7"></td>
+                <td onclick="boxClick(this)" class="box" id="8"></td>
+                <td onclick="boxClick(this)" class="box" id="9"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <!-- Game Info -->
+          <div id="gameInfo">
+            <div id="player" class="text-white display-1"></div>
+            <div id="gameState" class="text-white display-4 mt-3"></div>
+            <div id="btnState" class="text-white mt-3"></div>
+            <div id="disconnectState" class="text-white mt-3 mb-3 fs-1"></div>
+            <div id="turn" class="text-white display-3"></div>
+          </div>
+          <table class="table table-responsive-lg table-borderless" id="scoreBoard">
+            <tr>
+              <td id="XTag" class="score"><h1 class="display-1">X</h1></td>
+              <td id="tieTag" class="score text-white"><h1 class="display-3">Tie</h1></td>
+              <td id="OTag" class="score"><h1 class="display-1">O</h1></td>
+            </tr>
+            <tr>
+              <td class="score text-white" id="XScore"><h1 class="display-3">0</h1></td>
+              <td class="score text-white" id="tieScore"><h1 class="display-3">0</h1></td>
+              <td class="score text-white" id="OScore"><h1 class="display-3">0</h1></td>
+            </tr>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+
+      <form action="/tic-tac-toe/menu">
+        <div class="mt-3 pt-3">
+          <button class="menuBtn loadingMenuBtn btn" type="submit">
+            <i class="fa fa-sign-out" aria-hidden="true">   Back To Menu</i>
+          </button>
+        </div>
+      </form>
+    </div>
+		
+    <div id="loadingContainer">
+      <div id="searchingContainer">
+				
+        <div id="searchingText">
+          <div id="roomId"></div>
+          <div id="searchState">
+            <h1 class="display-1">Searching for Opponent</h1>
+          </div>
+        </div>
+				
+        <form action="/tic-tac-toe/menu">
+          <div class="menuBtnContainer">
+            <button class="menuBtn loadingMenuBtn btn" type="submit">
+              <i class="fa fa-sign-out" aria-hidden="true">   Back To Menu</i>
+            </button>
+          </div>
+        </form>
+				
+      </div>
+    </div>
+
+		<!-- Fast Click JS -->
+    <script src="/js/fastclick.js"></script>
+		
+		<!-- Socket Client Connection -->
+    <script src="/socket.io/socket.io.js"></script>
+
+		<!-- Custom JS -->
+    <script src="/js/loading.js"></script>
+    <script src="/js/game.js"></script>
+  </body>
+</html>

@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Delvinlim/uas-project#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1",
+    "socket.io": "^4.4.0"
   }
 }

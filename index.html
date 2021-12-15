@@ -3,30 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
     <title>UAS Project</title>
+
+    <!-- Page Icon -->
+    <link class="icon" rel="shortcut icon" type="image" href="images/logo kelompok 6.png"/>
     
     <!-- Font Awesome CDN  -->
     <link
       rel="stylesheet"
+      type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      />
+    />
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
 
     <!-- AOS Animation -->
-    <link rel="stylesheet" href="vendor/aos/aos.css">
+    <link rel="stylesheet" href="vendor/aos/aos.css" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
 
     <!-- Custom CSS  -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-
     <!-- Header -->
     <header class="header">
       <a href="#" class="logo">
@@ -36,7 +41,7 @@
       <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
       </div>
-      
+
       <nav class="navbar">
         <a href="#home">home</a>
         <a href="#games">game</a>
@@ -85,7 +90,10 @@
           </div>
           <div class="content">
             <h3>Snake Game</h3>
-            <a href="snake-game/index.html" type="button" class="btn btn-primary"
+            <a
+              href="/snake"
+              type="button"
+              class="btn btn-primary"
               >Play Now</a
             >
           </div>
@@ -99,15 +107,17 @@
         >
           <div class="image">
             <img
-              src="images/aim lab.jpg"
+              src="images/tic-tac.jpg"
               class="img-thumbnail"
               loading="lazy"
               alt="Aim Lab Picture"
             />
           </div>
           <div class="content">
-            <h3>aim lab</h3>
-            <a href="aim-game/index.html" type="button" class="btn btn-primary">Play Now</a>
+            <h3>Tic Tac Toe</h3>
+            <a href="/tic-tac-toe" type="button" class="btn btn-primary"
+              >Play Now</a
+            >
           </div>
         </div>
 
@@ -151,7 +161,7 @@
               loading="lazy"
               alt="Teams Picture"
             />
-            <h1>Augustino Sanduo</h1>
+            <h1 class="mt-3 text-white">Augustino Sanduo</h1>
             <a
               href="#"
               class="btn btn-outline-primary mb-5"
@@ -168,7 +178,7 @@
               loading="lazy"
               alt=""
             />
-            <h1>Delvin Lim</h1>
+            <h1 class="mt-3 text-white">Delvin Lim</h1>
             <a
               href="#"
               class="btn btn-outline-primary mb-5"
@@ -185,7 +195,7 @@
               loading="lazy"
               alt=""
             />
-            <h1>Vincentius Junior Samudra</h1>
+            <h1 class="mt-3 text-white">Vincentius Junior Samudra</h1>
             <a
               href="#"
               class="btn btn-outline-primary mb-5"
@@ -210,7 +220,7 @@
               loading="lazy"
               alt=""
             />
-            <h1>Jason Andrian</h1>
+            <h1 class="mt-3 text-white">Jason Andrian</h1>
             <a
               href="#"
               class="btn btn-outline-primary mb-5"
@@ -227,7 +237,7 @@
               loading="lazy"
               alt=""
             />
-            <h1>Navelina</h1>
+            <h1 class="mt-3 text-white">Navelina</h1>
             <a
               href="#"
               class="btn btn-outline-primary mb-5"
@@ -244,7 +254,7 @@
               loading="lazy"
               alt=""
             />
-            <h1>Jeffrey Andrian</h1>
+            <h1 class="mt-3 text-white">Jeffrey Andrian</h1>
             <a
               href="#"
               class="btn btn-outline-primary mb-5"
@@ -347,57 +357,73 @@
       <h1 class="heading">student's review</h1>
 
       <div class="container">
-
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="testimonials-slider swiper-container"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div class="swiper-wrapper">
-  
             <div class="swiper-slide">
               <div class="review-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Interesting, even tho this is a game for kids. i kinda like it so
-                  much. simple game but still good enough
+                  Interesting, even tho this is a game for kids. i kinda like it
+                  so much. simple game but still good enough
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="images/muka alai.png" class="review-img" loading="lazy" alt="">
+                <img
+                  src="images/muka alai.png"
+                  class="review-img"
+                  loading="lazy"
+                  alt=""
+                />
                 <h3>Augustino Sanduo</h3>
                 <h4>Students</h4>
               </div>
-            </div>   
+            </div>
 
             <div class="swiper-slide">
               <div class="review-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Interesting, even tho this is a game for kids. i kinda like it so
-                  much. simple game but still good enough
+                  Interesting, even tho this is a game for kids. i kinda like it
+                  so much. simple game but still good enough
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="images/profile1.jpeg" class="review-img" loading="lazy" alt="">
+                <img
+                  src="images/profile1.jpeg"
+                  class="review-img"
+                  loading="lazy"
+                  alt=""
+                />
                 <h3>Anonymous</h3>
                 <h4>Students</h4>
               </div>
-            </div>            
-            
+            </div>
+
             <div class="swiper-slide">
               <div class="review-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Interesting, even tho this is a game for kids. i kinda like it so
-                  much. simple game but still good enough
+                  Interesting, even tho this is a game for kids. i kinda like it
+                  so much. simple game but still good enough
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="images/vincentius.png" class="review-img" loading="lazy" alt="">
+                <img
+                  src="images/vincentius.png"
+                  class="review-img"
+                  loading="lazy"
+                  alt=""
+                />
                 <h3>Vincentius</h3>
                 <h4>Students</h4>
               </div>
-            </div>            
+            </div>
           </div>
-          
+
           <div class="swiper-pagination"></div>
         </div>
-
-      </div>            
+      </div>
     </section>
 
     <!-- Footer -->
@@ -416,7 +442,7 @@
 
     <!-- Swiper JS -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
-    
+
     <!-- Custom JS  -->
     <script src="js/script.js"></script>
   </body>

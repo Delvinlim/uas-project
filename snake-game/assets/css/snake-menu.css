@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*rgb(223, 156, 13);*/
+  section {
+    height: 100vh;
+    
+  }
+  .blank{
+    background:transparent;
+    height: 17vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .intro {
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+    font-family:'Press Start 2P', cursive !important;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+  }
+  
+  .intro h1 {
+    font-size: 60pt;
+    letter-spacing: 1px;
+    background: linear-gradient(to bottom, #3700ff, #00fff2);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    text-shadow:0;
+  }
+  .intro h2 {
+      color: white;
+    font-size: 20pt;
+  }
+
+
+  .intro button {
+    font-family:'Press Start 2P', cursive !important;
+    position: relative;
+    width: 170px;
+    height: 50px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 23px;  
+    background-color:rgb(10, 115, 253);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow:0px 9px 0px rgb(18, 67, 202), 0px 9px 0px #222222;
+    transition: all 0.2 ease;
+  }
+  .intro button:active{
+    
+    box-shadow:0px 5px 0px rgb(0, 49, 114), 0px 5px 0px #222222;
+    transform: translateY(4px);
+  }
+  .animation-area {
+	background: linear-gradient(to left, #48087c,#310749);
+	width: 100%;
+	height: 100vh;
+}
+.box-area {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.box-area li {
+	position: absolute;
+	display: block;
+	list-style: none;
+    border-radius: 20px;
+	width: 25px;
+	height: 25px;
+	background: rgba(255, 255, 255, 0.2);
+	animation: animate 20s linear infinite;
+	bottom: -150px;
+}
+.box-area li:nth-child(1) {
+	left: 86%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+}
+.box-area li:nth-child(2) {
+	left: 12%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+	left: 70%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 5.5s;
+}
+.box-area li:nth-child(4) {
+	left: 42%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 15s;
+}
+.box-area li:nth-child(5) {
+	left: 65%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 0s;
+}
+.box-area li:nth-child(6) {
+	left: 15%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 3.5s;
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}

@@ -27,7 +27,7 @@ const game = () => {
       introScreen.classList.remove("fadeIn");
     });
   };
-  
+
   // close match
   const closeGameButton = document.querySelectorAll("[data-quit-button]");
   const match = document.querySelector(".match");
@@ -154,33 +154,49 @@ const game = () => {
   // testing
   const updateWinner = (playerScore, computerScore) => {
     if(pScore >= 5){
+      words = ["Yo Nice Game",
+      "Lets do it again buddy",
+      "Congrats Dude, Well Played",
+      "Ah, you're just lucky",
+      "You're Doing Great, Good Game"
+    ]
+      randomInt = Math.floor(Math.random() * 4) + 1
+      console.log(randomInt);
       Swal.fire({
-        title: 'You Win',
-        width: 600,
-        padding: '3em',
+        title: words[randomInt],
+        // width: 600,
+        // padding: '3em',
         color: '#716add',
         background: '#fff',
-        backdrop: `rgba(0,0,123,0.4)`
+        backdrop: `rgba(0,0,123,0.4)`,
       }).then(() => {
         playerScore == "0"
         computerScore == "0"
         window.location = "/suit"
       })
     }
+
     if(cScore >= 5){
+      words = ["Accepting failure is one of the positive thing for your life", 
+      "You Lose Dummy", 
+      "Well Well Well, S*ck being u", 
+      "Nice Try Buddy", 
+      "tch such a noob guys"
+    ]
+      randomInt = Math.floor(Math.random() * 4) + 1
+      console.log(randomInt);
       Swal.fire({
-        title: 'You Lose',
-        width: 600,
-        padding: '3em',
+        title: words[randomInt],
+        // width: 600,
+        // padding: '3em',
         color: '#716add',
         background: '#fff',
-        backdrop: `rgba(0,0,123,0.4)`
+        backdrop: `rgba(0,0,123,0.4)`,
       }).then(() => {
         playerScore == "0"
         computerScore == "0"
         window.location = "/suit"
       });
-      console.log('hello');
     }
   }
   
@@ -267,19 +283,15 @@ const game = () => {
 function exitGame() {
   let timerInterval
   Swal.fire({
-    title: 'Thank You for playing the game!',
+    title: 'Thank You!<br>Pls consider to give us good marks!',
     width: 500,
     padding: '2em',
     background: '#fff',
     // html: '<b></b>',
-    timer: 1000,
+    timer: 2000,
     timerProgressBar: true,
     didOpen: () => {
       Swal.showLoading()
-      const b = Swal.getHtmlContainer().querySelector('b')
-      timerInterval = setInterval(() => {
-        b.textContent = Swal.getTimerLeft()
-      }, 100)
     },
     willClose: () => {
       clearInterval(timerInterval)

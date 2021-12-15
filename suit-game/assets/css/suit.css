@@ -19,6 +19,10 @@ body {
   overflow-x: hidden;
   font-family: sans-serif;
   height: 100vh;
+  /* position: relative; */
+}
+
+section {
   position: relative;
 }
 
@@ -100,7 +104,7 @@ body {
 .match {
   width: 150vh;
   height: 70vh;
-  margin-top: 25px;
+  margin-top: 8rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -416,7 +420,7 @@ div.fadeIn {
   }
   
   .match .hands {
-    height: 35vh;
+    height: 20vh;
   }
   
   .match .options img {
@@ -430,7 +434,8 @@ div.fadeIn {
   }
   
   .winner {
-    font-size: 2.5rem;
+    margin-top: 5rem;
+    font-size: 3rem;
   }
   
   .hands img {

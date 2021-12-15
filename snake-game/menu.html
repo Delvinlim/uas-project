@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link class="icon" rel="shortcut icon" type="image" href="img/icon snake.png"> 
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/snake-menu.css">
+</head>
+<body>
+    <section class="game">
+        <!-- SCORE -->
+        <div class="animation-area">
+            <ul class="box-area">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="blank">
+            <div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <div>
+                <h2></h2>
+                <p></p>
+            </div>
+            </div>
+  
+        <!-- Main Menu -->
+            <div class="intro">
+            <h1>Snake Game</h1>
+            <h2>Click Start to Play!</h2>
+            <br><br>
+            <button class="start" onclick="document.location='/snake/game'">Start</button>
+            <br>
+            <button onclick="exitGame()">Exit</button>
+            </div>
+        </div>
+
+    <!-- Sweetalert 2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+    <!-- Custom JS -->
+    <script src="js/snake.js"></script>
+</body>
+</html>
